@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 from django.contrib.auth import get_user_model
-import mongoengine
-
+import django_mongoengine
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -88,8 +87,13 @@ PARENT_HOST = 'dhdx.de:8000'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-mongoengine.connect('test')
+MONGODB_DATABASES = {
+    "default": {
+        "name": "dhdx"
+    },
+}
 
+INSTALLED_APPS += ["django_mongoengine"]
 
 DATABASES = {
     'default': {

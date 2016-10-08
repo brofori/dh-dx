@@ -1,12 +1,11 @@
-from mongoengine import Document
-from mongoengine.base.fields import BaseField
-from mongoengine.fields import ListField, StringField, ReferenceField
+from django_mongoengine import Document, EmbeddedDocument, fields
+
 
 TYPES = ['vaccination,pill,juice,injection']
 
 class Drugs(Document):
-    name = StringField(required=True, max_length=200)
-    type = BaseField(choices=TYPES)
-    sideEffects = ListField()
-    schedule = ListField()
-    interactions = ListField(ReferenceField('self'))
+    name = fields.StringField(required=True, max_length=200)
+    type = fields.StringField()
+    sideEffect = fields.ListField()
+    schedule = fields.ListField()
+    interactions = fields.ListField(fields.ReferenceField('self'))

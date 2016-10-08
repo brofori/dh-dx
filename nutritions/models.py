@@ -1,12 +1,10 @@
-from mongoengine import Document
-from mongoengine.base.fields import BaseField
-from mongoengine.fields import ListField, StringField, ReferenceField, DateTimeField, IntField
+from django_mongoengine import Document, EmbeddedDocument, fields
 
 
 def Nutritions(Document):
-    timestamps = ListField(DateTimeField())
-    carbs = IntField()
-    fat = IntField()
-    protein = IntField()
-    calories = IntField()
-    vitamineA = IntField()
+    timestamps = fields.ListField(fields.DateTimeField())
+    carbs = fields.IntField()
+    fat = fields.IntField()
+    protein = fields.IntField()
+    calories = fields.IntField()
+    vitamineA = fields.IntField()

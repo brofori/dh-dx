@@ -8,5 +8,5 @@ def drug(request, drug_id):
 
 
 def drugs(request):
-    drugs = Drugs.objects.all()
-    return JsonResponse(drugs)
+    drugs = Drugs.objects
+    return JsonResponse(drugs,safe=False)
