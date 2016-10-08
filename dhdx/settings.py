@@ -71,6 +71,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dhdx.wsgi.application'
 
+DEFAULT_SITE_DOMAIN = 'dhdx.de:8000'
+SESSION_COOKIE_DOMAIN = '.dhdx.de'
+PARENT_HOST = 'dhdx.de:8000'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
