@@ -8,5 +8,5 @@ def nutrition(request, nutrition_id):
 
 
 def nutritions(request):
-    nutrition = Nutritions.objects.all()
-    return JsonResponse(nutrition)
+    nutritions = Nutritions.objects.all()
+    return JsonResponse(nutritions)

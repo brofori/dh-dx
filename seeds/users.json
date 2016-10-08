@@ -3,6 +3,25 @@
     "email": "patient1@example.org",
     "first_name": "Manfred",
     "last_name": "Meyer",
+    "gender": "male",
     "birthday": "1971-10-08T13:34:56+00:00"
+  },{
+    "email": "patient2@example.org",
+    "first_name": "Elliot",
+    "last_name": "Alderson",
+    "gender": "male",
+    "birthday": "1986-10-08T13:34:56+00:00"
+  },{
+    "email": "patient3@example.org",
+    "first_name": "Tina",
+    "last_name": "Turner",
+    "gender": "female",
+    "birthday": "1951-10-08T13:34:56+00:00"
+  },{
+    "email": "patient4@example.org",
+    "first_name": "Maria",
+    "last_name": "Meyer",
+    "gender": "female",
+    "birthday": "1983-10-08T13:34:56+00:00"
   }
 ]

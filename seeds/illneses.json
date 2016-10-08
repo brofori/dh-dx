@@ -1,0 +1,45 @@
+[
+  {
+    "type": "Herzinfarkt",
+    "start_date": "2016-01-08T14:13:41+00:00",
+    "end_date": "2016-01-20T14:13:41+00:00",
+    "therapy": {
+      "type": "Krankenhausaufenthalt",
+
+      "drugs": [
+        {
+          "drug_id": "57f9313fc500fa6bda9359e7",
+          "amount": "100"
+        },
+        {
+          "drug_id": "57f9313fc500fa6bda9359e8",
+          "amount": "250"
+        },
+        {
+          "drug_id": "57f9313fc500fa6bda9359e9",
+          "amount": "100"
+        },
+        {
+          "drug_id": "57f9313fc500fa6bda9359ea",
+          "amount": "3"
+        }
+      ]
+    },
+    "user_id": "57f930bfbaa9648d75e175f2"
+  },
+  {
+    "type": "Torn ACL",
+    "start_date": "2016-01-08T14:13:41+00:00",
+    "end_date": "2016-09-08T14:13:41+00:00",
+    "therapy": {
+      "type": "Physiotherapie",
+      "drugs": [
+        {
+          "drug_id": "57f9313fc500fa6bda9359e5",
+          "amount": "800"
+        }
+      ]
+    },
+    "user_id": "57f930bfbaa9648d75e175f5"
+  }
+]

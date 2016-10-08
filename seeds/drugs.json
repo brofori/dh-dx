@@ -2,19 +2,37 @@
   {
     "type": "pill",
     "sideEffect": "headache",
-    "name": "ibuprofen",
+    "name": "Ibuprofen",
     "interactions": [ ]
   },
   {
     "type": "pill",
     "sideEffect": "headache",
-    "name": "aspirin",
+    "name": "Aspirin",
+    "interactions": [ ]
+  },
+  {
+    "type": "pill",
+    "sideEffect": "headache,illnes",
+    "name": "Betablocker",
+    "interactions": [ ]
+  },
+  {
+    "type": "pill",
+    "sideEffect": "headache,illnes",
+    "name": "Azetylsalizylsäure",
+    "interactions": [ ]
+  },
+  {
+    "type": "pill",
+    "sideEffect": "headache,illnes",
+    "name": "Cholesterinsenker",
     "interactions": [ ]
   },
   {
     "type": "vaccination",
     "sideEffect": "headache,illnes",
-    "name": "ambirix",
+    "name": "AT1 Antagonisten",
     "interactions": [ ]
   }
 ]

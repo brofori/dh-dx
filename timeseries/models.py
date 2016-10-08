@@ -1,9 +1,6 @@
-from mongoengine import Document
-from mongoengine.base import BaseField
-from mongoengine.fields import ListField, StringField, DateTimeField, DynamicField
-
+from django_mongoengine import Document, EmbeddedDocument, fields
 
 def TimeSeries():
-    type = StringField()
-    timestamp = DateTimeField()
-    value = DynamicField()
+    type = fields.StringField()
+    timestamp = fields.DateTimeField()
+    value = fields.DictField()

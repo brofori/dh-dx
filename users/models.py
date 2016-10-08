@@ -1,10 +1,8 @@
-from mongoengine import Document
-from mongoengine.base.fields import BaseField
-from mongoengine.fields import  StringField, DateTimeField
+from django_mongoengine import Document, EmbeddedDocument, fields
 
-
-class User(Document):
-    email = StringField(required=True, unique=True)
-    first_name = StringField(max_length=50)
-    last_name = StringField(max_length=50)
-    birthday = DateTimeField()
+class Users(Document):
+    email = fields.StringField(required=True, unique=True)
+    first_name = fields.StringField(max_length=50)
+    last_name = fields.StringField(max_length=50)
+    birthday = fields.DateTimeField()
+    gender = fields.StringField()
