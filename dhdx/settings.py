@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from django.contrib.auth import get_user_model
+import mongoengine
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -27,10 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +48,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+LOCAL_APPS = [
+    'activities',
+    'dhdx',
+    'drugs',
+    'illnesses',
+    'nutritions',
+    'timeseries',
+    'users',
+]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 ROOT_URLCONF = 'dhdx.urls'
 
@@ -76,20 +88,14 @@ PARENT_HOST = 'dhdx.de:8000'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-import mongoengine
 mongoengine.connect('test')
 
-AUTH_USER_MODEL=('mongo_auth.MongoUser')
-from django.contrib.auth import get_user_model
-user = get_user_model().objects.create_user(**user_data)
 
 DATABASES = {
-    'default' : {
-      'ENGINE' : ''
-   }
+    'default': {
+        'ENGINE': ''
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -109,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
@@ -122,7 +127,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/

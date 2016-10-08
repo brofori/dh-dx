@@ -8,4 +8,4 @@ class Drugs(Document):
     type = BaseField(choices=['vaccination,pill,juice,injection'])
     sideEffects = ListField()
     schedule = ListField()
-    interactions = ListField(ReferenceField(Document.Drugs))
+    interactions = ListField(ReferenceField('self'))
