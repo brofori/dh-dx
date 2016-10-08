@@ -5,8 +5,8 @@
           <span>{{title}}</span>
         </h2>
         <span flex></span>
-        <md-button class="md-icon-button" aria-label="Favorite">
-          <img ng-src="https://invatar0.appspot.com/svg/RF.jpg?s=200&font_family=Arial&font_size=80" class="user-image"/>
+        <md-button class="md-icon-button user-icon" aria-label="Favorite" ng-click="showUserPopup($event)">
+          <img ng-src="https://invatar0.appspot.com/svg/{{getUserInitials()}}.jpg?s=200&font_family=Arial&font_size=80" class="user-image"/>
         </md-button>
       </div>
     </md-toolbar>

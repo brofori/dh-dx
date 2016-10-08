@@ -1,7 +1,10 @@
 .user-image {
-  width: 40px;
-  height: 40px;
-  margin: -15px;
+  width: 50px;
+  height: 50px;
+  margin: -10px;
+}
+.md-sidenav-left {
+  height: calc(100vh - 64px);
 }
 .md-sidenav-left md-content {
   height: 100%;
@@ -23,6 +26,11 @@ md-whiteframe {
   margin: 10px;
   height: 200px;
 }
+.user-icon {
+  border: 2px solid #FF4FFE;
+  width: 50px !important;
+  height: 50px !important;
+}
 .day-select {
   height: 24px;
   line-height: 24px;
@@ -37,6 +45,37 @@ md-whiteframe {
   margin-top: 12px;
   background-color: #E0E0E0;
   height: 300px;
+  position: relative;
+}
+.times-of-day {
+  border-top: 1px solid grey;
+  padding-top: 3px;
+}
+.times-of-day .time {
+  font-size: 12px;
+  text-align: center;
+}
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+line-chart,
+bar-chart,
+.events {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.icon {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+}
+.icon:hover md-icon {
+  color: white;
 }
 .insights {
   height: calc(100vh - 80px);
@@ -49,6 +88,7 @@ md-whiteframe {
   font-size: 20px;
   display: inline-block;
   vertical-align: middle;
+  margin-left: 10px;
 }
 .insights md-icon {
   font-size: 35px;
@@ -75,6 +115,7 @@ md-whiteframe {
   margin: 0;
 }
 .medical-history {
+  height: calc(100vh - 80px);
   overflow-y: scroll;
 }
 .medical-history .filters {

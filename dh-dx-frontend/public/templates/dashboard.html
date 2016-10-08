@@ -5,6 +5,31 @@
         <md-icon class="nav-icon" md-font-library="material-icons">chevron_right</md-icon>
     </div>
     <div class="timeline">
-
+        <line-chart 
+            ng-if="showStats"
+            color="color"
+            data="timeSeries"/> 
+        <line-chart 
+            ng-if="showStats"
+            color="color2"
+            data="timeSeries2"/> 
+        <line-chart 
+            ng-if="showStats"
+            color="color3"
+            data="timeSeries3"/> 
+        <div class="events">
+            <span class="icon" style="left:{{event.left}}px;" ng-repeat="event in events">
+                        <md-tooltip md-direction="top">
+                        Meal
+                        </md-tooltip>
+                <md-icon class="nav-icon" md-font-library="material-icons">local_dining</md-icon>
+            </span>
+        </div>
     </div>
+    <div class="times-of-day" layout="row">
+        <span class="time" flex ng-repeat="t in timesOfDay">
+            {{t}}:00
+        </span>
+    </div>
+    <div></div>
 </div>

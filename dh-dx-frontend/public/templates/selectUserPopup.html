@@ -1,0 +1,9 @@
+<section>
+    <div layout="column" layout-align="space-between center">
+        <span style="padding-top: 20px;">Select a user</span>
+        <md-select ng-model="userIndex" placeholder="User" class="md-no-underline" ng-change="onchange()">
+          <md-option value="{{$index}}" ng-repeat="user in users">{{user.firstname}} {{user.lastname}}</md-option>
+
+        </md-select>
+      </div>
+</section>
