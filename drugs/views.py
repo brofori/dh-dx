@@ -4,6 +4,14 @@ import json
 from django_mongoengine.views.list import ListView
 
 
+def drug_serializer(drug):
+    return {'name': drug.name,
+            'sideEffect': drug.sideEffect,
+            'type': drug.type,
+            'schedule': drug.schedule,
+            'interactions': drug.interactions
+            }
+
 
 def drug(request, drug_id):
     drug = Drugs.objects.first(drug_id)
@@ -12,11 +20,11 @@ def drug(request, drug_id):
 
 def drugs(request):
     drugs = list(Drugs.objects.all())
-    drugs  = [list(drug) for drug in drugs]
+    drugs = [drug_serializer(drug) for drug in drugs]
     return HttpResponse(drugs, content_type='application/json')
 
-# class GetDrugs(ListView):
-#     document = Drugs
-#     context_object_name = 'drug_list'
-#     def render_to_response(self):
-#         return self
+    # class GetDrugs(ListView):
+    #     document = Drugs
+    #     context_object_name = 'drug_list'
+    #     def render_to_response(self):
+    #         return self
