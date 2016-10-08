@@ -79,6 +79,11 @@ PARENT_HOST = 'dhdx.de:8000'
 
 import mongoengine
 mongoengine.connect('test')
+
+AUTH_USER_MODEL=('mongo_auth.MongoUser')
+from django.contrib.auth import get_user_model
+user = get_user_model().objects.create_user(**user_data)
+
 DATABASES = {
     'default' : {
       'ENGINE' : ''
