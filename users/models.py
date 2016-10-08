@@ -5,3 +5,4 @@ class Users(Document):
     first_name = fields.StringField(max_length=50)
     last_name = fields.StringField(max_length=50)
     birthday = fields.DateTimeField()
+    gender = fields.StringField()
