@@ -1,0 +1,7 @@
+// Less configuration
+{
+    "version": "0.1.0",
+    "command": "lessc",
+    "isShellCommand": true,
+    "args": ["public/css/style.less", "public/css/style.css"]
+}
