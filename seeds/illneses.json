@@ -8,10 +8,21 @@
 
       "drugs": [
         {
-          "drug_id": "Ibuprofen",
-          "amount": "800"
+          "drug_id": "57f904e19a87bc1f3d40364b",
+          "amount": "100"
+        },
+        {
+          "drug_id": "57f904e19a87bc1f3d40364c",
+          "amount": "250"
+        },
+        {
+          "drug_id": "57f904e19a87bc1f3d40364dv",
+          "amount": "100"
+        },
+        {
+          "drug_id": "57f904e19a87bc1f3d40364e",
+          "amount": "3"
         }
-        "Betablocker,Azetylsalizylsäure (ASS),Cholesterinsenker (Statine),ACE-Hemmer oder AT1-Antagonisten"
       ]
     },
     "user_id": "57f9010a9a87bc1f3d403645"
@@ -30,5 +41,5 @@
       ]
     },
     "user_id": "57f9010a9a87bc1f3d403648"
-  },
+  }
 ]

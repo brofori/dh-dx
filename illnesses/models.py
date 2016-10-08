@@ -12,4 +12,4 @@ class Illnesses(Document):
     type = fields.StringField(choices=TYPES)
     start_date = fields.DateTimeField(default=datetime.today())
     end_date = fields.DateTimeField()
-    therapy = fields.ReferenceField(drug_models.Drugs)
+    therapy = fields.DictField()
