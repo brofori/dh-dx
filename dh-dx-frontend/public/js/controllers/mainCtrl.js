@@ -1,19 +1,19 @@
 app.controller('mainCtrl',function($rootScope, $scope, dataService, $state, $mdDialog){
-
-    dataService.getDrugs().then(function(response){
-        console.log(response)
-    })
     $scope.goTo = function(state){
         $state.go(state)
     }
+
+    dataService.getUsers().then(function(response){
+        console.log(response)
+        $scope.users = response
+    })
     $scope.getUserInitials = function(){
         let user = $scope.users[$scope.userIndex]
-        return user.firstname[0] + user.lastname[0];
+        return user.first_name[0] + user.last_name[0];
     }
     $scope.showUserPopup = function(ev){
         $mdDialog.show({
         controller: function(scope, $mdDialog){
-            scope.username = 'sdsd'
             scope.users = $scope.users;
             scope.userIndex = $scope.userIndex;
             scope.onchange = function(){$mdDialog.hide(scope.userIndex);}
@@ -32,13 +32,13 @@ app.controller('mainCtrl',function($rootScope, $scope, dataService, $state, $mdD
     $scope.userIndex = 0;
 
     $scope.users = [{
-        firstname:'Tilly',
-        lastname:'Rex',
+        first_name:'Tilly',
+        last_name:'Rex',
     },{
-        firstname:'Red',
-        lastname:'Fu',
+        first_name:'Red',
+        last_name:'Fu',
     },{
-        firstname:'K',
-        lastname:'Bro',
+        first_name:'K',
+        last_name:'Bro',
     }]
 });

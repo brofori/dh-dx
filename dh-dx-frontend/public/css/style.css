@@ -56,7 +56,10 @@ md-whiteframe {
 }
 .line {
   fill: none;
-  stroke-width: 1.5px;
+  stroke-width: 2px;
+}
+.bar:hover {
+  opacity: .8;
 }
 line-chart,
 bar-chart,
@@ -72,6 +75,9 @@ bar-chart,
   cursor: pointer;
   position: absolute;
   bottom: 10px;
+}
+.icon md-icon {
+  color: #149F9E;
 }
 .icon:hover md-icon {
   color: #E0E0E0;

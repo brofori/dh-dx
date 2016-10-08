@@ -22,7 +22,6 @@ app.factory('backendService', ['$q', '$http','$state','$cookies','$cookieStore',
   return '?'+str.join("&");
 }
 
-  $http.defaults.headers.common.Authorization = 'Bearer '+ ($cookies.get('token') || '');
 
   /* Standard ajax success function to be used when no callback is defined. */
   var standardSuccessFunction = function(data, status, headers, config) {
@@ -56,7 +55,7 @@ app.factory('backendService', ['$q', '$http','$state','$cookies','$cookieStore',
 
     var deferred = $q.defer();
 
-    $http.post(url + APP_URL_PARAMS + '?XDEBUG_SESSION_START=99999', data, { withCredentials: true })
+    $http.post(url + APP_URL_PARAMS + '?XDEBUG_SESSION_START=99999', data, { withCredentials: false })
         .success(function(data) {
           successCallback(data);
           deferred.resolve(data);
@@ -70,7 +69,6 @@ app.factory('backendService', ['$q', '$http','$state','$cookies','$cookieStore',
   };
 
   var ajaxGetRequest = function(url, data, successCallback, failCallback) {
-    $http.defaults.headers.common.Authorization = 'Bearer '+ ($cookies.get('token') || '');
     console.log($cookies)
     successCallback = successCallback ? successCallback : standardSuccessFunction;
 
@@ -83,7 +81,7 @@ app.factory('backendService', ['$q', '$http','$state','$cookies','$cookieStore',
 
     var deferred = $q.defer();
 
-    $http.get(url + serialize(data), { withCredentials: true })
+    $http.get(url + serialize(data), { withCredentials: false })
         .success(function(data) {
           successCallback(data);
           deferred.resolve(data);
@@ -97,7 +95,6 @@ app.factory('backendService', ['$q', '$http','$state','$cookies','$cookieStore',
   };
 
     var ajaxPutRequest = function(url, data, successCallback, failCallback) {
-    $http.defaults.headers.common.Authorization = 'Bearer '+ ($cookies.get('token') || '');
 
     successCallback = successCallback ? successCallback : standardSuccessFunction;
 
