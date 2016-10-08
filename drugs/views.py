@@ -5,26 +5,28 @@ from django_mongoengine.views.list import ListView
 
 
 def drug_serializer(drug):
-    return {'name': drug.name,
+    drug = {'name': drug.name,
             'sideEffect': drug.sideEffect,
             'type': drug.type,
             'schedule': drug.schedule,
             'interactions': drug.interactions
             }
+    return drug
 
 
 def drug(request, drug_id):
     drug = Drugs.objects.first(drug_id)
-    return HttpResponse(drug)
+    response = HttpResponse(drug_serializer(drug))
+    response["Access-Control-Allow-Origin"] = "localhost:3000"
+    response["Content-Type"] = "Application/json"
+    return response
 
 
 def drugs(request):
-    drugs = list(Drugs.objects.all())
+    drugs = Drugs.objects.all()
     drugs = [drug_serializer(drug) for drug in drugs]
-    return HttpResponse(drugs, content_type='application/json')
+    response = HttpResponse(json.dumps(drugs))
+    response["Access-Control-Allow-Origin"] = "http://localhost:3000"
+    response["Content-Type"] = "application/json"
+    return response
 
-    # class GetDrugs(ListView):
-    #     document = Drugs
-    #     context_object_name = 'drug_list'
-    #     def render_to_response(self):
-    #         return self

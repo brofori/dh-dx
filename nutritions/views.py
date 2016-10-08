@@ -1,12 +1,12 @@
-from django.http import JsonResponse
+from django.http import HttpResponse
 from nutritions.models import Nutritions
-
-
-def nutrition(request, nutrition_id):
-    nutrition = Nutritions.objects.first(nutrition_id)
-    return JsonResponse(nutrition)
+import json
+import os
 
 
 def nutritions(request):
-    nutritions = Nutritions.objects.all()
-    return JsonResponse(nutritions)
+    nutritions = os.open(os.getcwd() + 'nutritions.json')
+    response = HttpResponse(nutritions)
+    response["Access-Control-Allow-Origin"] = "localhost:3000"
+    response["Content-Type"] = "application/json"
+    return response
