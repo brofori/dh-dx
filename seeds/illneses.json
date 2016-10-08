@@ -1,0 +1,34 @@
+[
+  {
+    "type": "Herzinfarkt",
+    "start_date": "2016-01-08T14:13:41+00:00",
+    "end_date": "2016-01-20T14:13:41+00:00",
+    "therapy": {
+      "type": "Krankenhausaufenthalt",
+
+      "drugs": [
+        {
+          "drug_id": "Ibuprofen",
+          "amount": "800"
+        }
+        "Betablocker,Azetylsalizylsäure (ASS),Cholesterinsenker (Statine),ACE-Hemmer oder AT1-Antagonisten"
+      ]
+    },
+    "user_id": "57f9010a9a87bc1f3d403645"
+  },
+  {
+    "type": "Torn ACL",
+    "start_date": "2016-01-08T14:13:41+00:00",
+    "end_date": "2016-09-08T14:13:41+00:00",
+    "therapy": {
+      "type": "Physiotherapie",
+      "drugs": [
+        {
+          "drug_id": "Ibuprofen",
+          "amount": "800"
+        }
+      ]
+    },
+    "user_id": "57f9010a9a87bc1f3d403648"
+  },
+]
