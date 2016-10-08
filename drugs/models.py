@@ -1,6 +1,5 @@
 from django_mongoengine import Document, EmbeddedDocument, fields
 
-
 TYPES = ['vaccination,pill,juice,injection']
 
 class Drugs(Document):
