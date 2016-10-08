@@ -1,0 +1,8 @@
+[
+  {
+    "email": "patient1@example.org",
+    "first_name": "Manfred",
+    "last_name": "Meyer",
+    "birthday": "1971-10-08T13:34:56+00:00"
+  }
+]

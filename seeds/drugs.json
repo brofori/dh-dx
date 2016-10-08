@@ -1,0 +1,20 @@
+[
+  {
+    "type": "pill",
+    "sideEffect": "headache",
+    "name": "ibuprofen",
+    "interactions": [ ]
+  },
+  {
+    "type": "pill",
+    "sideEffect": "headache",
+    "name": "aspirin",
+    "interactions": [ ]
+  },
+  {
+    "type": "vaccination",
+    "sideEffect": "headache,illnes",
+    "name": "ambirix",
+    "interactions": [ ]
+  }
+]
