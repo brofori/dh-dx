@@ -3,7 +3,7 @@ from hx import views
 
 urlpatterns = [
 url(regex=r'',
-        view=views.HomepageView.as_view(),
+        view=views.home_view,
         name='homepage_view'
         ),
 ]
