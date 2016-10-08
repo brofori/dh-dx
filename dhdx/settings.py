@@ -36,8 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'hx',
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
@@ -78,10 +77,11 @@ PARENT_HOST = 'dhdx.de:8000'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+import mongoengine
+mongoengine.connect('test')
 DATABASES = {
     'default' : {
-      'ENGINE' : 'django_mongodb_engine',
-      'NAME' : 'my_database'
+      'ENGINE' : ''
    }
 }
 
