@@ -89,7 +89,9 @@ PARENT_HOST = 'dhdx.de:8000'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 MONGODB_DATABASES = {
     "default": {
-        "name": "dhdx"
+        "name": "dhdx",
+        "host": "85.214.221.164",
+        "tz_aware": True,  # if you using timezones in django (USE_TZ = True)
     },
 }
 

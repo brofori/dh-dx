@@ -8,24 +8,24 @@
 
       "drugs": [
         {
-          "drug_id": "57f904e19a87bc1f3d40364b",
+          "drug_id": "57f9313fc500fa6bda9359e7",
           "amount": "100"
         },
         {
-          "drug_id": "57f904e19a87bc1f3d40364c",
+          "drug_id": "57f9313fc500fa6bda9359e8",
           "amount": "250"
         },
         {
-          "drug_id": "57f904e19a87bc1f3d40364dv",
+          "drug_id": "57f9313fc500fa6bda9359e9",
           "amount": "100"
         },
         {
-          "drug_id": "57f904e19a87bc1f3d40364e",
+          "drug_id": "57f9313fc500fa6bda9359ea",
           "amount": "3"
         }
       ]
     },
-    "user_id": "57f9010a9a87bc1f3d403645"
+    "user_id": "57f930bfbaa9648d75e175f2"
   },
   {
     "type": "Torn ACL",
@@ -35,11 +35,11 @@
       "type": "Physiotherapie",
       "drugs": [
         {
-          "drug_id": "Ibuprofen",
+          "drug_id": "57f9313fc500fa6bda9359e5",
           "amount": "800"
         }
       ]
     },
-    "user_id": "57f9010a9a87bc1f3d403648"
+    "user_id": "57f930bfbaa9648d75e175f5"
   }
 ]
