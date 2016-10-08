@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from django.contrib.auth import get_user_model
+import mongoengine
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +48,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+LOCAL_APPS = [
+    'activities',
+    'dhdx',
+    'drugs',
+    'illnesses',
+    'nutritions',
+    'timeseries',
+    'users',
+]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 ROOT_URLCONF = 'dhdx.urls'
 
@@ -74,10 +88,8 @@ PARENT_HOST = 'dhdx.de:8000'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+mongoengine.connect('test')
 
-import mongoengine
-
-mongoengine.connect('dhdx')
 
 DATABASES = {
     'default': {

@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from users import views
+from drugs import views
 
 urlpatterns = [
     url(regex=r'(?P<drug_id>\d+)/$',view=views.drug),
