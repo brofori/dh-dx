@@ -43,7 +43,6 @@ md-whiteframe {
 }
 .timeline {
   margin-top: 12px;
-  background-color: #E0E0E0;
   height: 300px;
   position: relative;
 }
@@ -75,7 +74,7 @@ bar-chart,
   bottom: 10px;
 }
 .icon:hover md-icon {
-  color: white;
+  color: #E0E0E0;
 }
 .insights {
   height: calc(100vh - 80px);

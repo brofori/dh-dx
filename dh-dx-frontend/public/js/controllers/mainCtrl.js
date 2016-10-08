@@ -1,4 +1,8 @@
 app.controller('mainCtrl',function($rootScope, $scope, dataService, $state, $mdDialog){
+
+    dataService.getDrugs().then(function(response){
+        console.log(response)
+    })
     $scope.goTo = function(state){
         $state.go(state)
     }
@@ -28,7 +32,7 @@ app.controller('mainCtrl',function($rootScope, $scope, dataService, $state, $mdD
     $scope.userIndex = 0;
 
     $scope.users = [{
-        firstname:'T',
+        firstname:'Tilly',
         lastname:'Rex',
     },{
         firstname:'Red',
