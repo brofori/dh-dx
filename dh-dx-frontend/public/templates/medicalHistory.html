@@ -1,0 +1,25 @@
+<section class="medical-history" layout="column">
+    <div class="filters">
+        <md-radio-group ng-model="mode" layout="row">
+            <md-radio-button value="all" class="md-primary">All</md-radio-button>
+            <md-radio-button value="red"> Injuries </md-radio-button>
+            <md-radio-button value="yellow">Vaccination</md-radio-button>
+        </md-radio-group>
+    </div>
+    <div layout="row" flex class="event-timeline">
+        <span class="bubble top" ng-class="mode"></span>
+        <div class="left" flex ng-class="mode">
+            <div class="entry" ng-repeat="entry in leftArray" ng-class="mode">
+                <span>23.06.1998</span> - <span class="title">{{entry.title}}</span>
+                <p>HGKHGHJGHJ</p>
+            </div>
+        </div>
+        <div class="right" flex>
+            <div class="entry" ng-repeat="entry in rightArray" ng-class="mode">
+                <span>23.06.1998</span> - <span class="title">{{entry.title}}</span>
+                <p>HGKHGHJGHJ</p>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,39 @@
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <img class="logo-icon" src="/img/logo.png"/>
+        <h2>
+          <span>{{title}}</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Favorite">
+          <img ng-src="https://invatar0.appspot.com/svg/RF.jpg?s=200&font_family=Arial&font_size=80" class="user-image"/>
+        </md-button>
+      </div>
+    </md-toolbar>
+<section layout="row" flex>
+    <md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-md')"
+        md-whiteframe="4">
+      <md-content layout-padding>
+        <md-list>
+            <md-list-item ng-click="goTo('main.dashboard')">
+                  <md-icon md-font-library="material-icons">dashboard</md-icon>
+                <p>Dashboard</p>
+            </md-list-item>
+            <md-list-item ng-click="goTo('main.insights')">
+                  <md-icon md-font-library="material-icons">search</md-icon>
+                <p>Insights</p>
+            </md-list-item>
+            <md-list-item ng-click="goTo('main.medicalHistory')">
+                  <md-icon md-font-library="material-icons">history</md-icon>
+                <p>Medical History</p>
+            </md-list-item>
+        </md-list>
+      </md-content>
+    </md-sidenav>
+    <md-content flex layout-padding>
+        <ui-view flex></ui-view>
+    </md-content>
+</section>
