@@ -15,7 +15,7 @@ def drug_serializer(drug):
 
 
 def drug(request, drug_id):
-    drug = Drugs.objects.first(drug_id)
+    drug = Drugs.objects.get(id=drug_id)
     response = HttpResponse(drug_serializer(drug))
     response["Access-Control-Allow-Origin"] = "localhost:3000"
     response["Content-Type"] = "Application/json"

@@ -1,38 +1,22 @@
 [
-  {
-    "type": "pill",
-    "sideEffect": "headache",
-    "name": "Ibuprofen",
-    "interactions": [ ]
-  },
-  {
-    "type": "pill",
-    "sideEffect": "headache",
-    "name": "Aspirin",
-    "interactions": [ ]
-  },
-  {
-    "type": "pill",
-    "sideEffect": "headache,illnes",
-    "name": "Betablocker",
-    "interactions": [ ]
-  },
-  {
-    "type": "pill",
-    "sideEffect": "headache,illnes",
-    "name": "Azetylsalizylsäure",
-    "interactions": [ ]
-  },
-  {
-    "type": "pill",
-    "sideEffect": "headache,illnes",
-    "name": "Cholesterinsenker",
-    "interactions": [ ]
-  },
+  
   {
     "type": "vaccination",
     "sideEffect": "headache,illnes",
     "name": "AT1 Antagonisten",
     "interactions": [ ]
-  }
+  },
+  {
+    "type": "vaccination",
+    "sideEffect": "measles",
+    "name": "Measle-Vax",
+    "interactions": [ ]
+  },
+  {
+    "type": "vaccination",
+    "sideEffect": "Avian-Flu",
+    "name": "Avian-Flu-Vax",
+    "interactions": [ ]
+  },
+   
 ]
