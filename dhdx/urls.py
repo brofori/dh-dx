@@ -18,10 +18,12 @@ from django.contrib import admin
 from users import urls as user_urls
 from illnesses import urls as ill_urls
 from drugs import urls as drug_urls
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^users/', include(user_urls)),
     url(r'^illnesses/', include(ill_urls)),
     url(r'^drugs/', include(drug_urls)),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_URL)

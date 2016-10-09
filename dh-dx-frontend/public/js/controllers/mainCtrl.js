@@ -31,14 +31,14 @@ app.controller('mainCtrl',function($rootScope, $scope, dataService, $state, $mdD
     }
     $scope.userIndex = 0;
 
-    $scope.users = [{
-        first_name:'Tilly',
-        last_name:'Rex',
-    },{
-        first_name:'Red',
-        last_name:'Fu',
-    },{
-        first_name:'K',
-        last_name:'Bro',
-    }]
+    // $scope.users = [{
+    //     first_name:'Tilly',
+    //     last_name:'Rex',
+    // },{
+    //     first_name:'Red',
+    //     last_name:'Fu',
+    // },{
+    //     first_name:'K',
+    //     last_name:'Bro',
+    // }]
 });
