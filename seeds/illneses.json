@@ -1,7 +1,7 @@
 [
   {
-    "type": "Desease",
     "name": "Herzinfarkt",
+    "type": "Desease",
     "start_date": "2016-01-08T14:13:41+00:00",
     "end_date": "2016-01-20T14:13:41+00:00",
     "therapy": {
@@ -29,8 +29,8 @@
     "user_id": "57f930bfbaa9648d75e175f2"
   },
   {
-    "type": "Injury",
     "name": "Torn ACL",
+    "type": "Injury",
     "start_date": "2016-01-08T14:13:41+00:00",
     "end_date": "2016-09-08T14:13:41+00:00",
     "therapy": {
@@ -44,6 +44,7 @@
     },
     "user_id": "57f930bfbaa9648d75e175f5"
   },
+
   {
     "type": "Vaccination",
     "name": "Measles",
@@ -53,12 +54,25 @@
       "type": "Injection",
       "drugs": [
         {
-            "drug_id": "57f9313fc500fa6bda9359ea",
-            "type": "vaccination",
-            "sideEffect": "headache,illnes",
-            "name": "AT1 Antagonisten",
-            "interactions": [ ],
+            "drug_id": "57f9f569ef92f5ad5b03ac9b",
             "amount": "800"
+        }
+      ]
+    },
+    "user_id": "57f930bfbaa9648d75e175f5"
+  },
+
+  {
+    "type": "Vaccination",
+    "name": "Avian-Flu",
+    "start_date": "2015-02-08T14:13:50+00:00",
+    "end_date": "2015-02-08T14:13:50+00:00",
+    "therapy": {
+      "type": "Injection",
+      "drugs": [
+        {
+            "drug_id": "57f9f569ef92f5ad5b03ac9c",
+            "amount": "100"
         }
       ]
     },
