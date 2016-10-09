@@ -19,3 +19,11 @@ def illness_detail(request, ill_id):
     response["Access-Control-Allow-Origin"] = "localhost:3000"
     response["Content-Type"] = "application/json"
     return response
+
+def illnesses(request):
+    illness_list = Illnesses.objects.all()
+    illness_list = [illness_serializer(illness) for illness in illness_list]
+    response = HttpResponse(json.dumps(illness_list))
+    response["Access-Control-Allow-Origin"] = "localhost:3000"
+    response["Content-Type"] = "application/json"
+    return response

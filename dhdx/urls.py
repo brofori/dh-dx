@@ -22,6 +22,6 @@ from drugs import urls as drug_urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^users/', include(user_urls)),
-    url(r'^ill/', include(ill_urls)),
+    url(r'^illnesses/', include(ill_urls)),
     url(r'^drugs/', include(drug_urls)),
 ]

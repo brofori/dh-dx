@@ -11,3 +11,4 @@ class Activities(Document):
     type = BaseField(choices=TYPES)
     time = DateTimeField(default=datetime.now())
     used_calories = IntField(min_value=0)
+    used_id = StringField()
