@@ -5,24 +5,36 @@
         <md-icon class="nav-icon" md-font-library="material-icons">chevron_right</md-icon>
     </div>
     <div class="timeline">
+        <bar-chart 
+            ng-if="showStats"
+            color="color4"
+            max="1.1"
+            is-sleep="0"
+            data="timeSeries4"></bar-chart>
+        <bar-chart 
+            ng-if="showStats"
+            color="color5"
+            is-sleep="1"
+            max="3"
+            data="timeSeries5"></bar-chart>
         <line-chart 
             ng-if="showStats"
             color="color"
-            data="timeSeries"/> 
+            data="timeSeries"></line-chart>
         <line-chart 
             ng-if="showStats"
             color="color2"
-            data="timeSeries2"/> 
+            data="timeSeries2"></line-chart>
         <line-chart 
             ng-if="showStats"
             color="color3"
-            data="timeSeries3"/> 
+            data="timeSeries3"></line-chart>
         <div class="events">
             <span class="icon" style="left:{{event.left}}px;" ng-repeat="event in events">
                         <md-tooltip md-direction="top">
-                        Meal
+                        {{event.name}}
                         </md-tooltip>
-                <md-icon class="nav-icon" md-font-library="material-icons">local_dining</md-icon>
+                <md-icon class="nav-icon" md-font-library="material-icons">{{event.icon}}</md-icon>
             </span>
         </div>
     </div>
