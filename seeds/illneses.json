@@ -1,6 +1,7 @@
 [
   {
-    "type": "Herzinfarkt",
+    "type": "Desease",
+    "name": "Herzinfarkt",
     "start_date": "2016-01-08T14:13:41+00:00",
     "end_date": "2016-01-20T14:13:41+00:00",
     "therapy": {
@@ -28,7 +29,8 @@
     "user_id": "57f930bfbaa9648d75e175f2"
   },
   {
-    "type": "Torn ACL",
+    "type": "Injury",
+    "name": "Torn ACL",
     "start_date": "2016-01-08T14:13:41+00:00",
     "end_date": "2016-09-08T14:13:41+00:00",
     "therapy": {
@@ -37,6 +39,26 @@
         {
           "drug_id": "57f9313fc500fa6bda9359e5",
           "amount": "800"
+        }
+      ]
+    },
+    "user_id": "57f930bfbaa9648d75e175f5"
+  },
+  {
+    "type": "Vaccination",
+    "name": "Measles",
+    "start_date": "2014-02-08T14:13:41+00:00",
+    "end_date": "2014-02-08T14:13:41+00:00",
+    "therapy": {
+      "type": "Injection",
+      "drugs": [
+        {
+            "drug_id": "57f9313fc500fa6bda9359ea",
+            "type": "vaccination",
+            "sideEffect": "headache,illnes",
+            "name": "AT1 Antagonisten",
+            "interactions": [ ],
+            "amount": "800"
         }
       ]
     },
