@@ -1,11 +1,14 @@
 app.controller('mainCtrl',function($rootScope, $scope, dataService, $state, $mdDialog){
+
     $scope.goTo = function(state){
         $state.go(state)
     }
 
+
     dataService.getUsers().then(function(response){
         console.log(response)
         $scope.users = response
+        $rootScope.user = $scope.users[0]
     })
     $scope.getUserInitials = function(){
         let user = $scope.users[$scope.userIndex]
@@ -29,7 +32,14 @@ app.controller('mainCtrl',function($rootScope, $scope, dataService, $state, $mdD
             console.log(answer);
         });
     }
+
     $scope.userIndex = 0;
+    $scope.$watch('userIndex',function () {
+        if($scope.userIndex) {
+            $rootScope.user = $scope.users[$scope.userIndex]
+        }
+    })
+
 
     // $scope.users = [{
     //     first_name:'Tilly',

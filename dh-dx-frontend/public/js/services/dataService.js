@@ -4,9 +4,15 @@ app.factory('dataService', ['backendService', function (backendService) {
     var baseUrl = "http://85.214.221.164:8000/";
     var urls = {
        getDrugsUrl: baseUrl + 'drugs/',
+        getActivitiesUrl: function (userId) {
+            return baseUrl + 'users/'+userId+'/activities/'
+        },
        getUsersUrl: baseUrl + 'users/',
         getIllnessesUrl: function (userId) {
-            return baseUrl + 'users/'+userId+'/illnesses'
+            return baseUrl + 'users/'+userId+'/illnesses/'
+        },
+        addIllnessesUrl: function (drugid,userId) {
+            return baseUrl + '/illnesses/add/'+ drugid+'/'+userId
         }
     }
 
@@ -19,11 +25,19 @@ app.factory('dataService', ['backendService', function (backendService) {
     var getUsers = function(){
         return backendService.ajaxGetRequest(urls.getUsersUrl)
     }
-    
+    var getActivities = function(userId) {
+        return backendService.ajaxGetRequest(urls.getActivitiesUrl(userId))
+    }
+    var addIllness = function(drugId,userId){
+                return backendService.ajaxGetRequest(urls.addIllnessesUrl(drugid,userId))
+
+    }
 
     return {
         getDrugs:getDrugs,
         getUsers:getUsers,
         getMedicalHistory:getMedicalHistory,
+        getActivities:getActivities,
+        addIllness:addIllness
     };
 }])

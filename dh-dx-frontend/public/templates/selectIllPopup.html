@@ -1,0 +1,15 @@
+<section>
+    <div layout="column" layout-align="space-between center">
+        <span style="padding-top: 20px;">Add Illness</span>
+        <md-input-container>
+            <label>Title</label>
+            <input ng-model="illness.title">
+
+        </md-input-container>
+<md-select ng-model="userIndex" placeholder="User" class="md-no-underline">
+                <md-option value="{{$index}}"
+                           ng-repeat="drug in drugs">{{ drug.name }}</md-option>
+            </md-select>
+            <md-button class="btn1" ng-click="onchange();"> Add </md-button>
+    </div>
+</section>

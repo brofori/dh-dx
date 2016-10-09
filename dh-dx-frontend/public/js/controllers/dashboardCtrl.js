@@ -27,8 +27,8 @@ for(let i=0; i< 30; i++){
     $scope.timeSeries.push({time:$scope.startTime + 1000*60*60*24*i/30 , v: i==0?0:80+Math.random()*20})
     $scope.timeSeries2.push({time:$scope.startTime + 1000*60*60*24*i/30, v: i==0?0:70+Math.random()*30})
     $scope.timeSeries3.push({time:$scope.startTime + 1000*60*60*24*i/30, v: Math.abs(i-70) <30?40+Math.random()*20:Math.random()*1})
-
 }
+
 $scope.timesOfDay=[];
 for(let i=0; i<24; i++){
     $scope.timesOfDay.push(i)
@@ -42,7 +42,7 @@ $scope.events= [
 
 //
     $scope.events = []
-    dataService.getDrugs().then(function(response){
+    dataService.getActivities('57f930bfbaa9648d75e175f5').then(function(response){
         for(let i=0; i< response.length; i++){
             let ev = response[i]
             ev.type= 'med',

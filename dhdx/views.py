@@ -5,5 +5,5 @@ from django.http import HttpResponse
 
 
 def home_view(request):
-    response = HttpResponse("this is a response, bitch")
+    response = HttpResponse("this is a response")
     return response

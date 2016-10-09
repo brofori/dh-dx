@@ -215,3 +215,8 @@ bar-chart,
   border-left: 0px solid transparent;
   border-right: 20px solid #149F9E;
 }
+.medical-history .btn-add {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
