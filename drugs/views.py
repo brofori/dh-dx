@@ -9,7 +9,8 @@ def drug_serializer(drug):
             'sideEffect': drug.sideEffect,
             'type': drug.type,
             'schedule': drug.schedule,
-            'interactions': drug.interactions
+            'interactions': drug.interactions,
+            'id':str(drug.id)
             }
     return drug
 
@@ -17,7 +18,7 @@ def drug_serializer(drug):
 def drug(request, drug_id):
     drug = Drugs.objects.get(id=drug_id)
     response = HttpResponse(drug_serializer(drug))
-    response["Access-Control-Allow-Origin"] = "localhost:3000"
+    response["Access-Control-Allow-Origin"] = "http://localhost:3000"
     response["Content-Type"] = "Application/json"
     return response
 

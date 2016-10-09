@@ -125,7 +125,7 @@ app.controller('medicalHistoryCtrl', function ($rootScope, $scope, dataService, 
     }
     $scope.userIndex = 0
     $scope.$watch('userIndex',function () {
-        dataService.addIllness($scope.drugs[$scope.userIndex].id,$rootScope.user.id).then(function() {
+        dataService.addIllness($scope.drugs[$scope.userIndex].id,$rootScope.user.id).then(function(response ) {
                 $scope.response = response
                 $scope.showTextPopup()
             }

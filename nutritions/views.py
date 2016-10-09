@@ -7,6 +7,6 @@ import os
 def nutritions(request):
     nutritions = os.open(os.getcwd() + 'nutritions.json')
     response = HttpResponse(nutritions)
-    response["Access-Control-Allow-Origin"] = "localhost:3000"
+    response["Access-Control-Allow-Origin"] = "http://localhost:3000"
     response["Content-Type"] = "application/json"
     return response
