@@ -12,7 +12,7 @@ app.factory('dataService', ['backendService', function (backendService) {
             return baseUrl + 'users/'+userId+'/illnesses/'
         },
         addIllnessesUrl: function (drugid,userId) {
-            return baseUrl + 'illnesses/add/'+ drugid+'/'+userId
+            return baseUrl + 'illnesses/add/'+ drugid+'/'+userId+'/'
         }
     }
 
